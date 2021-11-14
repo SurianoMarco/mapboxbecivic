@@ -46,34 +46,39 @@ var geoJson = {
   type: 'FeatureCollection',
   features: [{
       type: 'Feature',
-      "geometry": { "type": "Point", "coordinates": [9.2
-,45.465]},
+      "geometry": { "type": "Point", "coordinates": [9.2,45.465]},
       "properties": {
           'title': 'Milano',
           'marker-color': '#ffff',
-          'marker-symbol': 'monument',
+          'marker-symbol': 'circle',
           'marker-size': 'large',
-
+          'link': '<a href="https://www.w3schools.com">Visit W3Schools</a>',
           // Store the image url and caption in an array.
           'images': [
             ['https://static.open.online/wp-content/uploads/2020/03/MILANO-TAG.jpg','The U.S. Capitol after the burning of Washington during the War of 1812'],
             ['https://i.imgur.com/xND1MND.jpg','Ford\'s Theatre in the 19th century, site of the 1865 assassination of President Lincoln'],
             ['https://i.imgur.com/EKJmqui.jpg','The National Cherry Blossom Festival is celebrated around the city each spring.']
-          ]
+          ],
+          
+          
+          
       }
+      
   }, {
       type: 'Feature',
       "geometry": { "type": "Point", "coordinates": [9.3, 40.71]},
       "properties": {
           'title': 'New York City',
           'marker-color': '#ffff',
-          'marker-symbol': 'city',
+          'marker-symbol': 'circle',
           'marker-size': 'large',
+          'link': '<a href="https://www.w3schools.com">Visit W3Schools</a>',
           'images': [
             ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
             ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
             ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
           ]
+          
 
       }
   }]
@@ -101,7 +106,8 @@ myLayer.on('layeradd', function(e) {
                             '<div class="slideshow">' +
                                 slideshowContent +
                             '</div>' +
-                            '<div class="cycle">' +
+                            '<h2>' + feature.properties.link + '</h2>' +
+                            '<div class="Cycle">' +
                                 '<a href="#" class="prev">&laquo; Previous</a>' +
                                 '<a href="#" class="next">Next &raquo;</a>' +
                             '</div>'
