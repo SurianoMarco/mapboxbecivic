@@ -46,7 +46,7 @@ var geoJson = {
   type: 'FeatureCollection',
   features: [{
       type: 'Feature',
-      "geometry": { "type": "Point", "coordinates": [9.2,45.465]},
+      "geometry": { "type": "Point", "coordinates": [9.19034, 45.46416]},
       "properties": {
           'title': 'Albero del servizio civile universale',
           'City': 'Acli Lombardia APS, Milano',
@@ -66,17 +66,17 @@ var geoJson = {
       
   }, {
       type: 'Feature',
-      "geometry": { "type": "Point", "coordinates": [9.3, 40.71]},
+      "geometry": { "type": "Point", "coordinates": [15, 37.28333]},
       "properties": {
-          'title': 'New York City',
+          'title': 'Badia Lost&Found',
+          'City': 'Badia Lost&Found, Lentini',
           'marker-color': '#ffff',
           'marker-symbol': 'circle',
           'marker-size': 'large',
-          'link': '<a href="https://www.w3schools.com">Visit W3Schools</a>',
+          'link': '<a href="https://badialostandfound.com/">Website</a>',
           'images': [
-            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
-            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
-            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+            ['','Badia Lost&Found è un progetto d’innovazione sociale e di rigenerazione per trasformare il quartiere “Badia” di Lentini da "cattedrale nel deserto" a parco d’arte contemporanea con un polo culturale (Palazzo Beneventano) che è anche una sorta di "quartier generale", di riferimento per la comunità.'],
+            ['','Qui semiotiche e storie del contesto riemergono con forme, soluzioni e tavolozze inedite, capaci di innescare percorsi di rigenerazione urbana, ravvivare luoghi ed edifici in abbandono in un campo d’indagine, segnare nuovi itinerari di viaggio e creare nuovi spazi d’incontro.'],
           ]
           
 
@@ -84,20 +84,80 @@ var geoJson = {
   },
   {
       type: 'Feature',
-      "geometry": { "type": "Point", "coordinates": [9.2, 40.71]},
+      "geometry": { "type": "Point", "coordinates": [9.163912, 45.452384]},
       "properties": {
-          'title': 'New York City',
+          'title': 'BASE Milano',
+          'City': 'BASE Milano, Milano',
           'marker-color': '#ffff',
           'marker-symbol': 'circle',
           'marker-size': 'large',
-          'link': '<a href="https://www.w3schools.com">Visit W3Schools</a>',
+          'link': '<a href="https://base.milano.it/">Website</a>',
+          // Store the image url and caption in an array.
           'images': [
-            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
-            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
-            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
-          ]
+            ['','BASE è un hub culturale e creativo di Milano, collocato e un progetto di contaminazione culturale tra arti, impresa, tecnologia e innovazione sociale, che ha contributo al processo di rigenerazione urbana del quartiere Tortona di Milano, restituendo alla città gli storici spazi della ex fabbrica Ansaldo.'],
+            ['','']
+          ],
           
-
+          
+          
+      }
+  }
+  ,{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [9.7, 45.05]},
+      "properties": {
+          'title': ' Biblioteca Besurica e dintorni',
+          'City': 'Nuovi Viaggiatori APS, Piacenza',
+          'marker-color': '#ffff',
+          'marker-symbol': 'circle',
+          'marker-size': 'large',
+          'link': '<a href="https://www.passerinilandi.piacenza.it/">Website</a>',
+          // Store the image url and caption in an array.
+          'images': [
+            ['','Nel 2017 un gruppo di cittadini si è mobilitato in difesa della biblioteca del quartiere. Da questa iniziativa è nata un’esperienza di cittadinanza attiva con progetti annuali in rete tra vari soggetti, pubblici e privati.'],
+            ['','Tra le iniziative: gruppo di lettura, attività di promozione della lettura (casette per i libri, libri in viaggio), messa a dimora di alberi, valorizzazione di spazi verdi, attività di socializzazione e animazione in generale.']
+          ],
+          
+      }  
+          
+      }
+      ,{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [9.090429, 45.463102]},
+      "properties": {
+          'title': 'Biblioteca Rionale – Baggio',
+          'City': 'Baggio Bene Comune, Milano',
+          'marker-color': '#ffff',
+          'marker-symbol': 'circle',
+          'marker-size': 'large',
+          'link': '<a href="https://www.facebook.com/biblioBaggio/">Website</a>',
+          // Store the image url and caption in an array.
+          'images': [
+            ['','Biblioteca di quartiere che dal 1963 raccoglie esperienze di generazioni che si tramandano l’attivismo civico e oggi spazio di confronto e dialogo per gli abitanti del quartiere.'],
+            ['','Tra le iniziative: gruppo di lettura, attività di promozione della lettura (casette per i libri, libri in viaggio), messa a dimora di alberi, valorizzazione di spazi verdi, attività di socializzazione e animazione in generale.']
+          ],
+          
+      
+      }  
+      }
+      ,{
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [9.213210, 45.501452]},
+      "properties": {
+          'title': ' BiG | Borgo intergenerazionale Greco',
+          'City': 'ABCittà società cooperativa sociale, Milano',
+          'marker-color': '#ffff',
+          'marker-symbol': 'circle',
+          'marker-size': 'large',
+          'link': '<a href="www.bigreco.it">Website</a>',
+          // Store the image url and caption in an array.
+          'images': [
+            ['','BiG | Borgo intergenerazionale Greco è un progetto di rigenerazione urbana finalizzato al recupero della storica Cascina Conti (risalente al XV secolo) attraverso una funzione di carattere sociale che vede la realizzazione di 25 minialloggi per giovani studenti e lavoratori, genitori singoli con bambini e anziani autosufficienti, nonché una serie di spazi e servizi condivisi.'],
+            ['','']
+          ],
+          
+      
+          
       }
   }
 
