@@ -49,15 +49,15 @@ var geoJson = {
       "geometry": { "type": "Point", "coordinates": [9.2,45.465]},
       "properties": {
           'title': 'Albero del servizio civile universale',
+          'City': 'Acli Lombardia APS, Milano',
           'marker-color': '#ffff',
           'marker-symbol': 'circle',
           'marker-size': 'large',
-          'link': '<a href="https://www.aclilombardia.it/0/#news">ACLI Lombardia APS</a>',
+          'link': '<a href="https://www.aclilombardia.it/0/#news">Website</a>',
           // Store the image url and caption in an array.
           'images': [
-            ['https://firebasestorage.googleapis.com/v0/b/marco-suriano.appspot.com/o/Albero%20del%20servizio%20civile%20universale%2FAlbero%20del%20servizio%20civile%20universale%20(1).jpeg?alt=media&token=b8bc6632-38b3-4827-b787-d8e88d91a033','Un punto di ritrovo e di passaggio in cui almeno una volta durante il proprio percorso di servizio civile (o alla sua conclusione) i volontari vengono invitati ad andare, un po’ come la meta di un viaggio. '],
-            ['https://i.imgur.com/xND1MND.jpg','Ford\'s Theatre in the 19th century, site of the 1865 assassination of President Lincoln'],
-            ['https://i.imgur.com/EKJmqui.jpg','Li lasciano un dono, un pensiero, qualcosa di sé e lo condividono con tutti coloro che promuovono forme di difesa non armata della patria.']
+            ['','Un punto di ritrovo e di passaggio in cui almeno una volta durante il proprio percorso di servizio civile (o alla sua conclusione) i volontari vengono invitati ad andare, un po’ come la meta di un viaggio. '],
+            ['','Li lasciano un dono, un pensiero, qualcosa di sé e lo condividono con tutti coloro che promuovono forme di difesa non armata della patria.']
           ],
           
           
@@ -81,7 +81,42 @@ var geoJson = {
           
 
       }
-  }]
+  },
+  {
+      type: 'Feature',
+      "geometry": { "type": "Point", "coordinates": [9.2, 40.71]},
+      "properties": {
+          'title': 'New York City',
+          'marker-color': '#ffff',
+          'marker-symbol': 'circle',
+          'marker-size': 'large',
+          'link': '<a href="https://www.w3schools.com">Visit W3Schools</a>',
+          'images': [
+            ['https://i.imgur.com/exemdwr.png','Peter Minuit is credited with the purchase of the island of Manhattan in 1626.'],
+            ['https://i.imgur.com/LHNDBpf.jpg','During the mid-19th Century, Broadway was extended the length of Manhattan.'],
+            ['https://i.imgur.com/Pk3DYH1.jpg','Times Square has the highest annual attendance rate of any tourist attraction in the world.']
+          ]
+          
+
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
 };
 
 // Add custom popup html to each marker.
@@ -103,11 +138,12 @@ myLayer.on('layeradd', function(e) {
     // Create custom popup content
     var popupContent =  '<div id="' + feature.properties.id + '" class="popup">' +
                             '<h2>' + feature.properties.title + '</h2>' +
+                            '<p>' + feature.properties.City + '</p>' +
+                            '<p>' + feature.properties.link + '</p>' +
                             '<div class="slideshow">' +
                                 slideshowContent +
                             '</div>' +
-                            '<h2>' + feature.properties.link + '</h2>' +
-                            '<div class="Cycle">' +
+                            '<div class="cycle">' +
                                 '<a href="#" class="prev">&laquo; Previous</a>' +
                                 '<a href="#" class="next">Next &raquo;</a>' +
                             '</div>'
