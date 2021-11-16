@@ -1,22 +1,25 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Slideshow gallery in a marker tooltip</title>
+<title>Civic Places</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
 <style>
-  body { margin:0; padding:0; }
+  body { margin:0; padding:0;}
   #map { position:absolute; top:0; bottom:0; width:100%; }
+  
 </style>
 </head>
 <body>
 <style>
+
 .popup {
   text-align:center;
   }
 
-.popup .slideshow .image        { display:none; }
+
+.popup .slideshow .image        { display:none;}
 .popup .slideshow .image.active { display:block; }
 .popup .slideshow img {
   width:100%;
@@ -1101,26 +1104,6 @@ var geoJson = {
   
   },{
       type: 'Feature',
-      "geometry": { "type": "Point", "coordinates": [14.251941,40.850264]},
-      "properties": {
-          'title': 'Piazza Bellini',
-          'City': 'Napoli',
-          'marker-color': '#ffff',
-          'marker-symbol': 'circle',
-          'marker-size': 'large',
-          'proposta':'CLEANAP',
-          'link': '<a href="https://www.comune.napoli.it/home" target="_blank" rel="noopener noreferrer" >Sito web</a>',
-          // Store the image url and caption in an array.
-          'images': [
-            ['https://firebasestorage.googleapis.com/v0/b/marco-suriano.appspot.com/o/Piazza%20Bellini%2FProgetto%20senza%20titolo-77.png?alt=media&token=d3e60fdc-15a9-46f2-bfd7-199a44337f0a','Piazza Bellini è una delle più frequentate della città per il numero di locali che si affacciano sulla stessa piazza, la centralità rispetto alla zona delle Università e del Conservatorio e centro fisico della vita di molti cittadini napoletani, in particolare gli studenti.'],
-          ],
-          
-      
-          
-      }
-  
-  },{
-      type: 'Feature',
       "geometry": { "type": "Point", "coordinates": [14.253570,40.860953]},
       "properties": {
           'title': 'Rione Sanità',
@@ -1394,9 +1377,7 @@ var geoJson = {
           'images': [
             ['https://firebasestorage.googleapis.com/v0/b/marco-suriano.appspot.com/o/Struttura%20ricettiva%2FProgetto%20senza%20titolo-60.png?alt=media&token=2925b250-037e-469b-8aea-5ff1e4aa225a','Una struttura ricettiva senza barriere architettoniche per persone affette da disabilità, famiglie e gruppi ed esperienze di volontariato rivolte all’assistenza, all’animazione e alla condivisione di momenti di quotidianità tra giovani volontari ed ospiti con disabilità.'],
           ],
-          
-      
-          
+
       }
   
   },{
@@ -1414,11 +1395,7 @@ var geoJson = {
           'images': [
             ['https://firebasestorage.googleapis.com/v0/b/marco-suriano.appspot.com/o/Via%20Baltea%2FProgetto%20senza%20titolo-61.png?alt=media&token=d6888aed-5337-41a8-af27-ef7fa6190e4d','Via Baltea è un community hub che ospita laboratori artigianali, progetti culturali, un’attività di ristorazione e spazi per i cittadini ed il quartiere e che promuove pratiche culturali collaborative basate sulla partecipazione e sull’attivismo.'],
           ],
-          
-      
-          
       }
-  
   },{
       type: 'Feature',
       "geometry": { "type": "Point", "coordinates": [11.723088,45.761636]},
@@ -1433,12 +1410,8 @@ var geoJson = {
           // Store the image url and caption in an array.
           'images': [
             ['https://firebasestorage.googleapis.com/v0/b/marco-suriano.appspot.com/o/Villa%2FProgetto%20senza%20titolo-62.png?alt=media&token=888c0278-7381-4db0-81b9-7ff1122cf04e','Villa Angaran San Giuseppe è un complesso monumentale in stile palladiano che da spazio vuoto (di senso) a luogo pieno (di vita), in cui disabilità, disagio minorile, vulnerabilità e povertà convivono e si contaminano con imprese sociali virtuose.'],
-          ],
-          
-      
-          
+          ],   
       }
-  
   },{
       type: 'Feature',
       "geometry": { "type": "Point", "coordinates": [14.088273,37.275652]},
@@ -1453,12 +1426,8 @@ var geoJson = {
           // Store the image url and caption in an array.
           'images': [
             ['https://firebasestorage.googleapis.com/v0/b/marco-suriano.appspot.com/o/Villaggio%2FProgetto%20senza%20titolo-63.png?alt=media&token=92535967-e5b5-421c-9fe3-e637e053e37b','Il Villaggio Monte degli Ulivi prende il nome dal piccolo rilievo su cui nasce, nell’entroterra siciliano, ricco di ulivi. Negli anni ’60 all’architetto Leonardo Ricci viene affidato il progetto di architettura voluto dal Centro Ecumenico valdese “Servizio Cristiano. Il villaggio incarna i principi di solidarietà attiva, contrasto all’illegalità ed alla mafia, sviluppo sostenibile e oggi ospita due scuole, un micro nido e un centro diagnostico, oltre ad attività culturali aperte al pubblico.'],
-          ],
-          
-      
-          
+          ],    
       }
-  
   },{
       type: 'Feature',
       "geometry": { "type": "Point", "coordinates": [10.558314,45.552099]},
@@ -1572,7 +1541,7 @@ myLayer.on('layeradd', function(e) {
                             '<div class="slideshow">' +
                                 slideshowContent +
                             '</div>' +
-                            '<h1>' + feature.properties.proposta + '</h1>' +
+                            '<h3>' + feature.properties.proposta + '</h3>' +
                             '<p>' + feature.properties.link + '</p>' +
                         '</div>';
 
